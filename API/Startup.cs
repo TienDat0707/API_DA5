@@ -2,12 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BLL;
+using BLL.Interfaces;
+using DAL;
+using DAL.Helper;
+using DAL.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Model;
 
 namespace API
 {
@@ -23,7 +29,15 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin()           //Fix API ISSUE
+                                                                   .AllowAnyMethod()               //Fix API ISSUE
+                                                                    .AllowAnyHeader()));
             services.AddControllersWithViews();
+            services.AddTransient<IDatabaseHelper, DatabaseHelper>();
+            services.AddTransient<IkhachhangRespo, khachhangRespo>();
+            services.AddTransient<IkhachhangBusiness, khachhangBusiness>();
+            services.AddTransient<IdanhmucBusiness, danhmucBusiness>();
+            services.AddTransient<IdanhmucRespo, danhmucRespo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +55,7 @@ namespace API
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseCors("AllowAll");
             app.UseRouting();
 
             app.UseAuthorization();
