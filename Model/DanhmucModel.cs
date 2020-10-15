@@ -8,6 +8,7 @@ namespace Model
     {
         public int madm { get; set; }
         public string tendm { get; set; }
+        public string url { get; set; }
         
     }
 }

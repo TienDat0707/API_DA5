@@ -19,9 +19,26 @@ namespace BLL
             return _Respo.Get_ALL_Sanpham();
         }
 
-        public SanphamModel Get_Sanpham_By_ID()
+       
+
+        public SanphamModel Get_Sanpham_By_ID(int id)
         {
-            throw new NotImplementedException();
+            return _Respo.Get_Sanpham_By_ID(id);
+        }
+
+        public List<SanphamModel> Get_Sanpham_lq(int id)
+        {
+            return _Respo.Get_Sanpham_lq(id);
+        }
+
+        public List<SanphamModel> Get_Sanpham_New()
+        {
+            return _Respo.Get_Sanpham_New();
+        }
+
+        public List<SanphamModel> get_san_pham_by_iddm(int id)
+        {
+            return _Respo.get_san_pham_by_iddm(id);
         }
     }
 }

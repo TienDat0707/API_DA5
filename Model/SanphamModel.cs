@@ -15,6 +15,7 @@ namespace Model
         public DateTime ngaynhap { get; set; }
         public int maloai { get; set; }
         public int luotmua { get; set; }
+        public string motangan { get; set; }
         public string mota { get; set; }
         public int rate { get; set; }
 
