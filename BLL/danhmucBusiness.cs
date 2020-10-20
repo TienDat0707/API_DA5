@@ -13,7 +13,7 @@ namespace BLL
         {
             _Respo = respo;
         }
-        public List<DanhmucModel> Get_All_Danh_Muc()
+        public List<DanhMuc> Get_All_Danh_Muc()
         {
             return _Respo.Get_All_Danh_Muc();
         }

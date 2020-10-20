@@ -7,6 +7,6 @@ namespace DAL.Interfaces
 {
     public interface IdanhmucRespo
     {
-        List<DanhmucModel> Get_All_Danh_Muc();
+        List<DanhMuc>Get_All_Danh_Muc();
     }
 }

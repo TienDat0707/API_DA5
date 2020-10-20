@@ -16,7 +16,7 @@ namespace DAL
         {
             _dbHelper = ihelper;
         }
-        public List<DanhmucModel> Get_All_Danh_Muc()
+        public List<DanhMuc> Get_All_Danh_Muc()
         {
             string msgError = "";
             try
@@ -24,7 +24,7 @@ namespace DAL
                 var dt = _dbHelper.ExecuteSProcedureReturnDataTable(out msgError, "sp_danhmuc_all");
                 if (!string.IsNullOrEmpty(msgError))
                     throw new Exception(msgError);
-                return dt.ConvertTo<DanhmucModel>().ToList();
+                return dt.ConvertTo<DanhMuc>().ToList();
             }
             catch (Exception ex)
             {

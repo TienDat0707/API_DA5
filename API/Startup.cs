@@ -34,17 +34,17 @@ namespace API
                                                                     .AllowAnyHeader()));
             services.AddControllersWithViews();
             services.AddTransient<IDatabaseHelper, DatabaseHelper>();
-            services.AddTransient<IkhachhangRespo, khachhangRespo>();
-            services.AddTransient<IkhachhangBusiness, khachhangBusiness>();
+            //services.AddTransient<IkhachhangRespo, khachhangRespo>();
+            //services.AddTransient<IkhachhangBusiness, khachhangBusiness>();
             services.AddTransient<IdanhmucBusiness, danhmucBusiness>();
             services.AddTransient<IdanhmucRespo, danhmucRespo>();
             services.AddTransient<IsanphamRespo, SanphamRespo>();
             services.AddTransient<IsanphamBusiness, sanphamBusiness>();
-            services.AddTransient<IloaisanphamBusiness, loaisanphamBusiness>();
-            services.AddTransient<IloaisanphamRespo, loaisanphamRespo>();
-            services.AddTransient<ItintucBusiness, TintucBusiness>();
-            services.AddTransient<ItintucRespo, TintucRespo>();
-          
+            //services.AddTransient<IloaisanphamBusiness, loaisanphamBusiness>();
+            //services.AddTransient<IloaisanphamRespo, loaisanphamRespo>();
+            //services.AddTransient<ItintucBusiness, TintucBusiness>();
+            //services.AddTransient<ItintucRespo, TintucRespo>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

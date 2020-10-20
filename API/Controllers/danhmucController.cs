@@ -21,7 +21,7 @@ namespace API.Controllers
         }
         [HttpGet]
         [Route("Get_All_Danh_Muc")]
-        public List<DanhmucModel> Get_All_Danh_Muc()
+        public List<DanhMuc> Get_All_Danh_Muc()
         {
             return _Business.Get_All_Danh_Muc();
         }

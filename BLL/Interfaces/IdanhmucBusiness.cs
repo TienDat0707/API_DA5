@@ -7,6 +7,6 @@ namespace BLL.Interfaces
 {
     public interface IdanhmucBusiness
     {
-        List<DanhmucModel> Get_All_Danh_Muc();
+        List<DanhMuc6> Get_All_Danh_Muc();
     }
 }
